@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><teamservers>
+<teamserver>
+<target dataSource="" login="admin" url="http://localhost:9080/teamserver"/>
+<entry baseType="BRLRule" checksum="3167770296" projectName="CreditCardProject" qualifiedName="nameValidationRule" sourceCS="06D6C8864F1B5EBCFE2D0300276024BF" targetCS="3167770296" type="BRLRule" uuid="047f8d91-14a3-43dc-aeba-3097b69f1d2f"/>
+<entry baseType="BusinessObjectModel" checksum="1999374450" projectName="CreditCardProject" qualifiedName="CreditBOM" sourceCS="56493924D08F0C9F8963DD2C21E9BDCB" targetCS="1999374450" type="BusinessObjectModel" uuid="bbe85650-8d69-4343-8eb2-9558dbe2aa1a"/>
+<entry baseType="DecisionOperation" checksum="1536088748" projectName="CreditCardProject" qualifiedName="CreditOperation" sourceCS="B735D46EC6202682AD100E1F7C1EACE6" targetCS="1536088748" type="DecisionOperation" uuid="53c00346-e5d1-4bd1-8000-1cf673127a80"/>
+<entry baseType="DecisionTable" checksum="1729080558" projectName="CreditCardProject" qualifiedName="bankTable" sourceCS="E62E09F8CC81F303CEA088BE433448B2" targetCS="1729080558" type="DecisionTable" uuid="74c877a3-6e71-44bd-8fb0-1d594db95b33"/>
+<entry baseType="DecisionTree" checksum="3162852791" projectName="CreditCardProject" qualifiedName="cardTree" sourceCS="F7191D89C9F86A68A00AAB8418502633" targetCS="3162852791" type="DecisionTree" uuid="3862bd84-ca1b-4a34-ba83-b4c4ddd128d3"/>
+<entry baseType="DeploymentConfiguration" checksum="4026962052" projectName="CreditCardProject" qualifiedName="CreditProject" sourceCS="B1A15A9EEDBB699C4B922DC87E40F6B7" targetCS="4026962052" type="DeploymentConfiguration" uuid="6f18ee20-a8fa-411a-83cb-28be2e5d8df0"/>
+<entry baseType="Function" checksum="2283975538" projectName="CreditCardProject" qualifiedName="emailFunc" sourceCS="F7339BC168DB8A10A793AC2051DEBC42" targetCS="2283975538" type="Function" uuid="37c49e70-73aa-4cbf-be68-a2cc906f2ea9"/>
+<entry baseType="Function" checksum="861805681" projectName="CreditCardProject" qualifiedName="nameFunc" sourceCS="C16D293851EE4DC3EF4F3B9884FA4770" targetCS="861805681" type="Function" uuid="3b522a2e-7de0-4296-a46d-dbadd1c26e13"/>
+<entry baseType="Function" checksum="4198301653" projectName="CreditCardProject" qualifiedName="phFunc" sourceCS="A75E73CD59FAD2B534B1C91FB31F3BA4" targetCS="4198301653" type="Function" uuid="bc2e63c4-653d-46d5-99e2-e3c8e7096fe8"/>
+<entry baseType="Resource" checksum="2977781481" projectName="CreditCardProject" qualifiedName="META-INF/deployment.xml" sourceCS="94954E73399F9177DBD5289C879A0A88" targetCS="2977781481" type="Resource" uuid="META-INF/deployment.xml"/>
+<entry baseType="Ruleflow" checksum="284602874" projectName="CreditCardProject" qualifiedName="Creditflow" sourceCS="2B117BF496F5DE2FD10C77D0D25E75D8" targetCS="284602874" type="Ruleflow" uuid="58d0983c-4924-4d1b-846c-0d08abbef494"/>
+<entry baseType="RuleProjectInfo" checksum="707863311" projectName="CreditCardProject" qualifiedName="CreditCardProject" sourceCS="6F31BDD23642DF35E08EE960DD493A0D" targetCS="707863311" type="RuleProjectInfo" uuid="407650d5-8785-4283-b2dd-5c0d5b5ec8c4"/>
+<entry baseType="VariableSet" checksum="459062543" projectName="CreditCardProject" qualifiedName="CreditVariables" sourceCS="B773DC0688F4C36418B20B427D460E70" targetCS="459062543" type="VariableSet" uuid="e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+<entry baseType="Vocabulary" checksum="1999374450" projectName="CreditCardProject" qualifiedName="CreditBOM_en_US" sourceCS="E238E74E7A8C9962275156BA765D0FB9" targetCS="1999374450" type="Vocabulary" uuid="53303ab7-c685-48e7-80af-92fcb2a2caba"/>
+</teamserver>
+</teamservers>

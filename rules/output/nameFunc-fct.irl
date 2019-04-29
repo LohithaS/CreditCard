@@ -1,0 +1,13 @@
+use credit;
+use status;
+use email;
+use progress;
+
+function java.lang.String nameFunc() {
+
+if(credit.name.matches("^[a-zA-Z][a-zA-Z\\s]+$"))
+progress="";
+else
+progress="enter valid name ";
+return progress;
+}

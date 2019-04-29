@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="CreditOperation" usingRuleflow="true" ruleflowName="Creditflow" targetRuleProjectName="CreditCardProject">
+  <name>CreditOperation</name>
+  <uuid>53c00346-e5d1-4bd1-8000-1cf673127a80</uuid>
+  <referencedVariables variableName="credit" variableSetName="CreditVariables">
+    <variableSet href="../rules/CreditVariables.var#e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+  </referencedVariables>
+  <referencedVariables variableName="email" variableSetName="CreditVariables">
+    <variableSet href="../rules/CreditVariables.var#e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+  </referencedVariables>
+  <referencedVariables variableName="gender" variableSetName="CreditVariables">
+    <variableSet href="../rules/CreditVariables.var#e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+  </referencedVariables>
+  <referencedVariables variableName="otp" variableSetName="CreditVariables" direction="OUT">
+    <variableSet href="../rules/CreditVariables.var#e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+  </referencedVariables>
+  <referencedVariables variableName="phone" variableSetName="CreditVariables">
+    <variableSet href="../rules/CreditVariables.var#e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+  </referencedVariables>
+  <referencedVariables variableName="progress" variableSetName="CreditVariables" direction="OUT">
+    <variableSet href="../rules/CreditVariables.var#e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+  </referencedVariables>
+  <referencedVariables variableName="employed" variableSetName="CreditVariables">
+    <variableSet href="../rules/CreditVariables.var#e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+  </referencedVariables>
+  <referencedVariables variableName="creditCard" variableSetName="CreditVariables">
+    <variableSet href="../rules/CreditVariables.var#e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+  </referencedVariables>
+  <referencedVariables variableName="creditCardEligibility" variableSetName="CreditVariables" direction="OUT">
+    <variableSet href="../rules/CreditVariables.var#e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+  </referencedVariables>
+  <referencedVariables variableName="creditScore" variableSetName="CreditVariables">
+    <variableSet href="../rules/CreditVariables.var#e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+  </referencedVariables>
+  <referencedVariables variableName="bank" variableSetName="CreditVariables">
+    <variableSet href="../rules/CreditVariables.var#e120b544-7bad-4678-a7d1-37ca5b01551a"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Creditflow.rfl#58d0983c-4924-4d1b-846c-0d08abbef494"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="CreditOperation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../CreditCardProject#407650d5-8785-4283-b2dd-5c0d5b5ec8c4"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

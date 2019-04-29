@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.rule:Function xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore">
+  <name>phFunc</name>
+  <uuid>bc2e63c4-653d-46d5-99e2-e3c8e7096fe8</uuid>
+  <returnType>java.lang.String</returnType>
+  <definition><![CDATA[if(phone.matches("[0-9]{10}"))
+return "proceed";
+else
+return "enter valid phone number";
+]]></definition>
+  <imports>use phone;</imports>
+</ilog.rules.studio.model.rule:Function>

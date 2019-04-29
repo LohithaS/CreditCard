@@ -1,0 +1,14 @@
+variables {
+  java.lang.String status;
+  creditCard.CreditCard credit;
+  java.lang.String email;
+  java.lang.String gender;
+  java.lang.String otp;
+  java.lang.String phone;
+  java.lang.String progress;
+  java.lang.String employed;
+  java.lang.String creditCard;
+  java.lang.String creditCardEligibility;
+  java.lang.Integer creditScore;
+  java.lang.String bank;
+}
