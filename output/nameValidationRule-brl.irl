@@ -1,0 +1,18 @@
+rule nameValidationRule {
+   property ilog.rules.business_name = "nameValidationRule";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      creditCard.CreditCard() from credit;
+      evaluate (((credit.name != null
+      	&& credit.age >= 18)
+      	&& gender in {"male", "female", "other"}));
+   } then {
+      status = "proceed";
+      ?context.updateContext();
+   } else {
+      status = "provide valid details";
+      ?context.updateContext();
+   }
+}
+

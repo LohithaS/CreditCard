@@ -1,0 +1,11 @@
+# Vocabulary Properties
+uuid = 53303ab7-c685-48e7-80af-92fcb2a2caba
+
+# creditCard.CreditCard
+creditCard.CreditCard#concept.label = credit card
+creditCard.CreditCard.age#phrase.action = set the age of {this} to {age}
+creditCard.CreditCard.age#phrase.navigation = {age} of {this}
+creditCard.CreditCard.name#phrase.action = set the name of {this} to {name}
+creditCard.CreditCard.name#phrase.navigation = {name} of {this}
+creditCard.CreditCard.sal#phrase.action = set the sal of {this} to {sal}
+creditCard.CreditCard.sal#phrase.navigation = {sal} of {this}

@@ -1,0 +1,189 @@
+// begin DT bankTable
+// -- begin rule 'bankTable 0'
+rule bankTable_0 {
+   property ilog.rules.business_name = "bankTable 1";
+   property ilog.rules.dt = "bankTable";
+   property ilog.rules.group = "bankTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate ((((bank.equals("Axis")))));
+   } then {
+      otp = "l2oag6";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'bankTable 0'
+// -- begin rule 'bankTable 1'
+rule bankTable_1 {
+   property ilog.rules.business_name = "bankTable 2";
+   property ilog.rules.dt = "bankTable";
+   property ilog.rules.group = "bankTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate ((((bank.equals("Bank of Baroda")))));
+   } then {
+      otp = "9c22h2";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'bankTable 1'
+// -- begin rule 'bankTable 2'
+rule bankTable_2 {
+   property ilog.rules.business_name = "bankTable 3";
+   property ilog.rules.dt = "bankTable";
+   property ilog.rules.group = "bankTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate ((((bank.equals("Bank of India")))));
+   } then {
+      otp = "ms739a";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'bankTable 2'
+// -- begin rule 'bankTable 3'
+rule bankTable_3 {
+   property ilog.rules.business_name = "bankTable 4";
+   property ilog.rules.dt = "bankTable";
+   property ilog.rules.group = "bankTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate ((((bank.equals("Canara")))));
+   } then {
+      otp = "js8w9x";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'bankTable 3'
+// -- begin rule 'bankTable 4'
+rule bankTable_4 {
+   property ilog.rules.business_name = "bankTable 5";
+   property ilog.rules.dt = "bankTable";
+   property ilog.rules.group = "bankTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate ((((bank.equals("HDFC")))));
+   } then {
+      otp = "aes738";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'bankTable 4'
+// -- begin rule 'bankTable 5'
+rule bankTable_5 {
+   property ilog.rules.business_name = "bankTable 6";
+   property ilog.rules.dt = "bankTable";
+   property ilog.rules.group = "bankTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate ((((bank.equals("ICICI")))));
+   } then {
+      otp = "h3yd88";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'bankTable 5'
+// -- begin rule 'bankTable 6'
+rule bankTable_6 {
+   property ilog.rules.business_name = "bankTable 7";
+   property ilog.rules.dt = "bankTable";
+   property ilog.rules.group = "bankTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate ((((bank.equals("IDBI")))));
+   } then {
+      otp = "9ood8y";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'bankTable 6'
+// -- begin rule 'bankTable 7'
+rule bankTable_7 {
+   property ilog.rules.business_name = "bankTable 8";
+   property ilog.rules.dt = "bankTable";
+   property ilog.rules.group = "bankTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate ((((bank.equals("Punjab National Bank")))));
+   } then {
+      otp = "pw94b8";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'bankTable 7'
+// -- begin rule 'bankTable 8'
+rule bankTable_8 {
+   property ilog.rules.business_name = "bankTable 9";
+   property ilog.rules.dt = "bankTable";
+   property ilog.rules.group = "bankTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate ((((bank.equals("State Bank of India")))));
+   } then {
+      otp = "8y76sr";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'bankTable 8'
+// -- begin rule 'bankTable 9'
+rule bankTable_9 {
+   property ilog.rules.business_name = "bankTable 10";
+   property ilog.rules.dt = "bankTable";
+   property ilog.rules.group = "bankTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate ((((bank.equals("Union Bank of India ")))));
+   } then {
+      otp = "t7exhu";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'bankTable 9'
+// -- begin rule 'bankTable 10'
+rule bankTable_10 {
+   property ilog.rules.business_name = "bankTable 11";
+   property ilog.rules.dt = "bankTable";
+   property ilog.rules.group = "bankTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate (((!((((bank.equals("Axis"))) || ((bank.equals("Bank of Baroda"))) || ((bank.equals("Bank of India"))) || ((bank.equals("Canara"))) || ((bank.equals("HDFC"))) || ((bank.equals("ICICI"))) || ((bank.equals("IDBI"))) || ((bank.equals("Punjab National Bank"))) || ((bank.equals("State Bank of India"))) || ((bank.equals("Union Bank of India "))))))));
+   } then {
+      otp = "0";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'bankTable 10'
+// end DT bankTable

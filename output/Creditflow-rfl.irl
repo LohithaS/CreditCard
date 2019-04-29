@@ -1,0 +1,110 @@
+use creditCardEligibility;
+use progress;
+use status;
+
+flowtask Creditflow {
+  property mainflowtask = false;
+  property ilog.rules.business_name = "Creditflow";
+  property ilog.rules.package_name = "";
+  initialaction {
+    nameFunc();
+  };
+  body {
+    fork
+    {
+      Creditflow#nameValidation;
+    }
+    &&
+    {
+      Creditflow#phValidatio;
+    }
+    &&
+    {
+      Creditflow#emailValidatio;
+    }
+    if ((progress.equals("proceed"))) {
+      Creditflow#nameValidationRule;
+      if ((status.equals("proceed"))) {
+        Creditflow#cardTree;
+        if ((creditCardEligibility.equals("Sorry"))) {
+        }
+        else {
+          Creditflow#bankTable;
+        }
+      }
+    }
+  }
+};
+
+functiontask Creditflow#nameValidation {
+  property ilog.rules.business_name = "Creditflow>nameValidation";
+  property ilog.rules.package_name = "";
+  body {
+  }
+};
+
+functiontask Creditflow#emailValidatio {
+  property ilog.rules.business_name = "Creditflow>emailValidatio";
+  property ilog.rules.package_name = "";
+  initialaction {
+    if(emailFunc()=="enter valid email")
+    {
+    	progress=progress+"enter valid email ";
+    }
+    else if (progress=="")
+    {
+    	progress="proceed";
+    }
+
+  };
+  body {
+  }
+};
+
+functiontask Creditflow#phValidatio {
+  property ilog.rules.business_name = "Creditflow>phValidatio";
+  property ilog.rules.package_name = "";
+  initialaction {
+    if(phFunc()=="enter valid phone number")
+    {
+    	progress=progress+"enter valid phone number ";
+    }
+
+  };
+  body {
+  }
+};
+
+ruletask Creditflow#nameValidationRule {
+  property ilog.rules.business_name = "Creditflow>nameValidationRule";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = sorted;
+  body {
+    nameValidationRule
+  }
+};
+
+ruletask Creditflow#cardTree {
+  property ilog.rules.business_name = "Creditflow>cardTree";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = sorted;
+  body {
+    group("cardTree")
+  }
+};
+
+ruletask Creditflow#bankTable {
+  property ilog.rules.business_name = "Creditflow>bankTable";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = sorted;
+  body {
+    group("bankTable")
+  }
+};
+

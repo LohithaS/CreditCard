@@ -1,0 +1,9 @@
+use phone;
+
+function java.lang.String phFunc() {
+if(phone.matches("[0-9]{10}"))
+return "proceed";
+else
+return "enter valid phone number";
+
+}

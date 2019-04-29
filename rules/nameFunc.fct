@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.rule:Function xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore">
+  <name>nameFunc</name>
+  <uuid>3b522a2e-7de0-4296-a46d-dbadd1c26e13</uuid>
+  <returnType>java.lang.String</returnType>
+  <definition><![CDATA[
+if(credit.name.matches("^[a-zA-Z][a-zA-Z\\s]+$"))
+progress="";
+else
+progress="enter valid name ";
+return progress;]]></definition>
+  <imports>use credit;</imports>
+  <imports>use status;</imports>
+  <imports>use email;</imports>
+  <imports>use progress;</imports>
+</ilog.rules.studio.model.rule:Function>

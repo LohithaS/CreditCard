@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.rule:Function xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore">
+  <name>emailFunc</name>
+  <uuid>37c49e70-73aa-4cbf-be68-a2cc906f2ea9</uuid>
+  <returnType>java.lang.String</returnType>
+  <definition><![CDATA[if(email.matches("^(.+)@(.+).com$"))
+return "proceed";
+else
+return "enter valid email";
+]]></definition>
+</ilog.rules.studio.model.rule:Function>
