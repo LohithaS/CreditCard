@@ -1,0 +1,146 @@
+// begin DT cardTree
+// -- begin rule 'cardTree 0'
+rule cardTree_0 {
+   property ilog.rules.business_name = "cardTree 1";
+   property ilog.rules.dt = "cardTree";
+   property ilog.rules.group = "cardTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      creditCard.CreditCard() from credit;
+      evaluate (((((creditCard.equals("yes"))
+      	&& (employed.equals("yes")))) && (creditScore.intValue() > 99) && (credit.sal in [10000, 20000])));
+   } then {
+      creditCardEligibility = "silver card";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'cardTree 0'
+// -- begin rule 'cardTree 1'
+rule cardTree_1 {
+   property ilog.rules.business_name = "cardTree 2";
+   property ilog.rules.dt = "cardTree";
+   property ilog.rules.group = "cardTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      creditCard.CreditCard() from credit;
+      evaluate (((((creditCard.equals("yes"))
+      	&& (employed.equals("yes")))) && (creditScore.intValue() > 99) && (credit.sal in [20000, 30000])));
+   } then {
+      creditCardEligibility = "gold card";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'cardTree 1'
+// -- begin rule 'cardTree 2'
+rule cardTree_2 {
+   property ilog.rules.business_name = "cardTree 3";
+   property ilog.rules.dt = "cardTree";
+   property ilog.rules.group = "cardTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      creditCard.CreditCard() from credit;
+      evaluate (((((creditCard.equals("yes"))
+      	&& (employed.equals("yes")))) && (creditScore.intValue() > 99) && (credit.sal in [30000, 1000000])));
+   } then {
+      creditCardEligibility = "diamond card";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'cardTree 2'
+// -- begin rule 'cardTree 3'
+rule cardTree_3 {
+   property ilog.rules.business_name = "cardTree 4";
+   property ilog.rules.dt = "cardTree";
+   property ilog.rules.group = "cardTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      creditCard.CreditCard() from credit;
+      evaluate (((((creditCard.equals("yes"))
+      	&& (employed.equals("yes")))) && (creditScore.intValue() > 99) && (credit.sal < 10000)));
+   } then {
+      creditCardEligibility = "Sorry";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'cardTree 3'
+// -- begin rule 'cardTree 4'
+rule cardTree_4 {
+   property ilog.rules.business_name = "cardTree 5";
+   property ilog.rules.dt = "cardTree";
+   property ilog.rules.group = "cardTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate (((((creditCard.equals("yes"))
+      	&& (employed.equals("yes")))) && (creditScore.intValue() < 100)));
+   } then {
+      creditCardEligibility = "Sorry";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'cardTree 4'
+// -- begin rule 'cardTree 5'
+rule cardTree_5 {
+   property ilog.rules.business_name = "cardTree 6";
+   property ilog.rules.dt = "cardTree";
+   property ilog.rules.group = "cardTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      creditCard.CreditCard() from credit;
+      evaluate (((((creditCard.equals("no"))
+      	&& (employed.equals("yes")))) && (credit.sal < 6000)));
+   } then {
+      creditCardEligibility = "Sorry";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'cardTree 5'
+// -- begin rule 'cardTree 6'
+rule cardTree_6 {
+   property ilog.rules.business_name = "cardTree 7";
+   property ilog.rules.dt = "cardTree";
+   property ilog.rules.group = "cardTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      creditCard.CreditCard() from credit;
+      evaluate (((((creditCard.equals("no"))
+      	&& (employed.equals("yes")))) && (credit.sal >= 6000)));
+   } then {
+      creditCardEligibility = "You have successfully opted your credit card";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'cardTree 6'
+// -- begin rule 'cardTree 7'
+rule cardTree_7 {
+   property ilog.rules.business_name = "cardTree 8";
+   property ilog.rules.dt = "cardTree";
+   property ilog.rules.group = "cardTree";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      IlrContext() from ?context;
+      evaluate (((((creditCard.equals("no"))
+      	&& (employed.equals("no"))))));
+   } then {
+      creditCardEligibility = "Sorry";
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'cardTree 7'
+// end DT cardTree

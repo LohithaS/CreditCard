@@ -1,0 +1,15 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/CreditCardProject//creditCardXOM"
+property uuid "bbe85650-8d69-4343-8eb2-9558dbe2aa1a"
+package creditCard;
+
+
+public class CreditCard
+{
+    public int age;
+    public string name;
+    public double sal;
+    public CreditCard();
+}
+

@@ -1,0 +1,7 @@
+function java.lang.String emailFunc() {
+if(email.matches("^(.+)@(.+).com$"))
+return "proceed";
+else
+return "enter valid email";
+
+}
